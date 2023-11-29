@@ -1,6 +1,7 @@
 #include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <stddef.h>
 
 /**
  * insert_node - Inserts a number into a sorted singly linked list.
@@ -23,7 +24,7 @@ listint_t *insert_node(listint_t **head, int number)
 
 	new_node->n = number;
 	new_node->next = NULL;
-	
+
 	current = *head;
 	prev = NULL;
 
@@ -58,22 +59,4 @@ void print_list(listint_t *head)
 		head = head->next;
 	}
 	printf("\n");
-}
-
-/**
- * main - Entry point
- * Return: Always 0 (Success)
- */
-int main(void)
-{
-	listint_t *head = NULL;
-
-	insert_node(&head, 5);
-	insert_node(&head, 10);
-	insert_node(&head, 2);
-	insert_node(&head, 7);
-	printf("Linked list after insertion: ");
-	print_list(head);
-
-	return (0);
 }
