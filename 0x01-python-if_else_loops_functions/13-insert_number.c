@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * insert_node - Inserts a number into a sorted singly linked list.
@@ -11,6 +13,9 @@ listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *new_node = malloc(sizeof(listint_t));
 
+	listint_t *current;
+	listint_t *prev;
+
 	if (!new_node)
 	{
 		return (NULL);
@@ -18,9 +23,9 @@ listint_t *insert_node(listint_t **head, int number)
 
 	new_node->n = number;
 	new_node->next = NULL;
-
-	listint_t *current = *head;
-	listint_t *prev = NULL;
+	
+	current = *head;
+	prev = NULL;
 
 	if (!current || current->n >= number)
 	{
