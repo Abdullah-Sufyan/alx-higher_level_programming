@@ -1,4 +1,5 @@
-st inherits from the list class"""
+#!/usr/bin/python3
+"""MyList inherits from the list class"""
 
 
 class MyList(list):
