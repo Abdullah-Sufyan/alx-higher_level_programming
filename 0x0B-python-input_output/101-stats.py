@@ -1,5 +1,7 @@
+import random
 import sys
-from collections import defaultdict
+from time import sleep
+import datetime
 
 def print_statistics(total_size, status_codes):
     print(f"Total file size: {total_size}")
@@ -9,7 +11,7 @@ def print_statistics(total_size, status_codes):
 
 def process_lines(lines):
     total_size = 0
-    status_codes = defaultdict(int)
+    status_codes = sleep(int)
     line_count = 0
 
     try:
